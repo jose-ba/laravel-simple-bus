@@ -18,14 +18,12 @@ class LaravelSimpleBusProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        $package
-            ->name('laravel-simple-bus')
-            ->hasConfigFile()
-            ->hasViews();
+        $package->name('laravel-simple-bus');
     }
 
     public function register(): void
     {
+        parent::register();
         $this->app->singleton(EventBus::class, LaravelSimpleEventsBus::class);
     }
 }
