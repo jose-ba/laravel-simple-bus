@@ -26,11 +26,6 @@ class LaravelSimpleBusProvider extends PackageServiceProvider
 
     public function register(): void
     {
-
-    }
-
-    public function boot(): void
-    {
         $this->app->singleton(EventBus::class, LaravelSimpleEventsBus::class);
     }
 }
