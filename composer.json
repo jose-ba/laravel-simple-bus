@@ -1,0 +1,27 @@
+{
+  "name": "jose-ba/laravel-simple-bus",
+  "description": "Paquete para usar simple-bus en Laravel",
+  "type": "library",
+  "require": {
+    "simple-bus/message-bus": "^6.2"
+  },
+  "authors": [
+    {
+      "name": "Jose Luis TR",
+      "email": "jose1987ba@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaravelSimpleBus\\LaravelSimpleBusProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "LaravelSimpleBus\\": "./laravel",
+      "Buses\\": "./src"
+    }
+  }
+}
